@@ -22,3 +22,13 @@ A complete E-Commerce Website for a Cafe with integrated payment gateway.
   <h4>Coffee & Shakes Page<h4>
  <img src="screenshots/Screenshot (120).png" width="600px" height="330px">
 <br><br>
+
+    
+<h4>Cart<h4>
+<img src="screenshots/Screenshot (124).png" width="600px" height="330px">
+<br><br>
+  
+  
+<h4>Payment Gateway<h4>
+<img src="screenshots/Screenshot (125).png" width="600px" height="330px">
+<br><br>

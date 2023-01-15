@@ -1,0 +1,721 @@
+*{
+    margin: 0;
+    padding: 0%; 
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: +1;
+}
+.menu{
+    background-color: rgb(0,0,0);
+    overflow: hidden;
+    position:relative;
+    top: 0;
+    transition:top 0.5s;
+}
+/*styling link in the navigation bar */
+.menu a{
+    
+    
+    float: left;
+    color:rgb(238, 203, 48);
+    text-align: center;
+    padding: 20px  2%;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu a:hover{
+    background-color: rgb(238, 203, 48);
+    color: black;
+    
+}
+nav{
+    width: 90%;
+    margin: auto;
+    padding-top: 0px;
+    position: fixed;
+    z-index: 3; 
+}
+nav ul{
+    float: right;
+}
+nav li{
+    display: inline-block;
+    border-radius: 3px;
+    padding: 10px 0px;
+}
+nav li a{
+   
+    padding: 10px 30px;
+    font-size: 18px;
+}
+#current,  nav li:hover , #ecart:hover{
+   
+   background-color: #dacae4bb;
+}
+#ecart a{
+    /* margin-left: 2px; */
+    padding: 10px 10px;
+}
+#ecart{
+    background-color: #dacae470  ; 
+    border-radius: 50px; 
+    margin-left: 10px;
+    /* padding: 10px 20px; */
+}
+
+#current a{
+    color: #060111ea;
+}
+nav li:hover a, #ecart:hover a{
+     color: #060111ea;
+}
+#branding{
+    float: left;
+}
+#brand{
+    color: #dacae4bb;
+    font-size: 35px;
+}
+a{
+text-decoration: none; 
+color: aliceblue;
+}
+#shopnow{
+
+    background: url("imageson/shop-now.jpeg") no-repeat 0 0px ;
+    background-size: 100% 140%;
+    width: 100%;
+    height: 250px; 
+    text-align: center; 
+    position: relative;
+}
+
+
+
+#layer {
+    background-color: rgba(26, 17, 46, 0.534);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* shop now */
+.content1{
+    padding-top: 200px;
+    color: white;
+    font-size: 25px;
+    width: 80%;
+    margin: auto;
+}
+#shoph1{
+    font-size: 50px;
+    padding-bottom: 20px ;
+}
+.content1 p{
+    padding-bottom: 50px;
+}
+#shopnowbutton{
+    border-radius: 3px;
+    background-color:  #dacae4bb ;
+    color: #060111ea ;
+    padding: 15px;
+    
+    /* position: absolute;
+    top: 50%;
+    left: 45%; */
+}
+#whereid{
+    color: #dacae4bb;
+}
+/* top sales  */ 
+.topsales{
+    padding: 100px 0;
+    text-align: center;
+    color: #060111ea;
+    /* background-color: #dacae4bb; */
+}
+#topsalesh1{
+    padding-bottom: 50px;
+    text-decoration: underline;
+}
+.topproduct{
+    display: inline-block;
+    width: 30%;
+    margin: auto;
+    height: 200px;
+    /* padding-top: 50px; */
+    position: relative;
+    text-align: center;
+}
+#toplayer img{
+    width: 100%;
+}
+#toplayer{
+    background-color: rgba(26, 17, 46, 0.534);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+}
+.topbuy{
+    font-size: 30px; 
+    font-weight: 600;
+    color: white;
+   position: absolute;
+   top: 30%;
+   left: 35%;
+   
+}
+.topproduct:hover #toplayer{
+    opacity: 0.8;
+}
+img{
+    /* width: 30%; */
+    height: 100%;
+}
+
+/* THE Explore  */ 
+#explore{
+    
+    /* background-color: #dacae4bb; */
+    width: 100%;
+    min-height: 1100px;
+    text-align: center;
+}
+#exploreh1{
+    text-decoration: underline;
+    background-color: #dacae4bb;
+    padding-top: 50px;
+     padding-bottom: 50px;
+     margin-bottom: 50px;
+}
+#explorecontainer{
+   float: left;
+}
+.exploreimg img{
+    width: 80%;
+    height: 300px;
+}
+.exploreimg{
+ width: 45%;
+ padding: 30px;
+ display: inline-block;
+ position: relative;
+}
+
+.explorename{
+    color: #060111ea; 
+    padding-bottom: 20px ;
+}
+/* #expimg1{
+    background: url("imageson/Explore1.jpeg") no-repeat 0 0px ;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 600px; 
+} */
+/* #expimg2{
+    background: url("imageson/Explore2.jpeg") no-repeat 0 0px ;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 600px; 
+} */ 
+.Explorep{
+    position: absolute;
+    /* background-color: rgb(218, 202, 228, 0.3); */
+    background-color: rgba(26, 17, 46, 0.534);
+padding: 2% 31%;
+    /* width: 0 100%; */
+    font-weight: 600;
+    top: 81.5%;
+    left: 14%;
+
+}
+.Explorep:hover{
+    background-color: rgba(11, 3, 27, 0.819);
+}
+
+/* parallax about */ 
+#parallax1{
+    background: url("imageson/pack1.jpeg") no-repeat 0 -301px ;
+    background-attachment: fixed;
+    background-size: 100% 150%;
+    width: 100%;
+    height: 350px; 
+    text-align: center; 
+    position: relative;
+}
+#layer{
+    background-color: rgba(26, 17, 46, 0.534);
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+}
+#parallax1text{
+    width: 85%;
+    margin: auto;
+    padding-top: 30px;
+    font-size: 22px;
+    color: aliceblue;
+}
+#parallax1h1{
+    padding: 30px 0;
+}
+#westyle{
+    color: #dacae4bb;
+}
+#parallax1p{
+    margin-bottom: 40px;
+}
+#aboutbutton{
+    background-color:  #dacae4bb ;
+    color: #060111ea ;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+#shopnowbutton:hover , #aboutbutton:hover{
+    background-color: #060111ea;
+
+    color: #dacae4bb ;
+}
+
+.footer{
+    background-color: rgb(17, 9, 1);
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    color: rgb(238, 203, 48);
+    font-size: 8px;
+
+}
+.f-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.f-content h5{
+    font-size: 1.2rem;
+    line-height: 3rem;
+    font-weight:300 ;
+    text-transform: capitalize;
+
+}
+.f-content p{
+    max-width: 100%;
+    margin: 6px auto;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: rgb(236, 235, 227);
+    background-color: rgb(17, 9, 1);
+}
+
+
+
+/* Shop NOW css */ 
+
+.category{
+    text-align: center;
+    width: 95%;
+    margin: auto;
+    padding: 4% 0;
+}
+.category h1{
+    margin-bottom: 30px;
+}
+.item img{
+
+    /* height: 80%;
+        width: 40%; */
+        height: 60%;
+        width: 40%;
+
+
+}
+
+
+#shopbuy{
+    padding-top: 10px;
+}
+.item{
+    
+    min-width: 80%;
+    padding: 40px 0px; 
+    /* margin: auto; */
+    margin: 10px 10px;
+    /* min-height: auto; */
+    position: relative;
+    text-align: center;
+    /* background-color: black; */
+    border: 2px solid rgba(31, 12, 49, 0.144);
+
+}
+.item:hover{
+    border: 2.5px solid rgba(25, 9, 39, 0.3);
+    /* border-bottom: 4px solid rgba(31, 12, 49, 0.244); */
+    background-color: #d68d43;
+}
+.item .price{
+    padding-top: 10px;
+    font-size: larger;
+}
+/* .item:hover #toplayer{
+    opacity: 0.8;
+} */
+
+/* #toplayer{
+    background-color: rgba(26, 17, 46, 0.534);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+} */
+.subcategory{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 0;  
+    min-height: 400px ; 
+    /* background-color: black; */
+}
+.buybutton , .cartbutton{
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    margin-top: 10px; 
+    background-color: #755b86bb;
+    color: white;
+}
+.buybutton:hover , .cartbutton:hover{
+    background-color: #060111ea;
+}
+
+#carthead{
+    text-align: center;
+    background-color: #060111ea;
+    color: white;
+    padding: 30px 0; 
+    margin-bottom: 50px ;
+}
+
+#cart{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    border: 2px solid #dacae4bb;
+    padding-bottom:9% ;
+    margin-bottom: 8%;
+    text-align: center;
+
+/*  */
+
+}
+
+#cartcontent{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+#cartcontent #cartitem li, #cartcontent #cartprice li {
+    display: block;
+    border-bottom: 2px solid rgba(6, 1, 17, 0.118);
+    height: 60px;
+    padding: 15px 30px 0 30px;
+    
+    /* margin: 0.5; */
+    
+}
+
+#cartlihead{
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(6, 1, 17, 0.118) ;
+
+}
+
+#cartitem, #cartprice{
+    text-align: left;
+    width: 80%;
+    font-weight: 500; 
+    margin: auto;
+    border: 2px solid  rgba(6, 1, 17, 0.118) ;
+    display: block;
+    /* padding: 0 60px; */
+}
+
+#cartcontent #totitem, #cartcontent #totamt{
+    border: 2px solid  rgba(6, 1, 17, 0.118) ;
+    padding: 15px 30px 0 30px; 
+    height: 60px; 
+    margin: 10px 15%  ;
+    background-color: rgba(6, 1, 17, 0.084) ;
+    font-weight: 600;
+}
+#cartcontent #totitem:hover , #cartcontent #totamt:hover {
+
+    
+    border: 2px solid  rgba(6, 1, 17, 0.158) ;
+    
+
+}
+#buyitbutton{
+
+    background-color:  #88679c8c ;
+    color: #060111ea ;
+    border-radius: 3px;
+    padding: 15px;
+    position: absolute; 
+    bottom: 40px;
+    left: 46%;
+
+    
+
+}
+#buyitbutton:hover{
+    font-weight: 700  ;
+    color:  white;
+    background-color:  #060111ea  ;
+}
+
+#cartcontent #cartitem li:hover , #cartcontent #cartprice li:hover {
+    border-bottom: 2px solid  rgba(6, 1, 17, 0.200) ;
+}
+/* 
+#cartitem{
+    width: 90%;
+    margin: auto;
+    padding: 0;
+} */
+
+/* About page css */
+
+#founderdiv{
+    padding-top: 100px;
+}
+
+.founder{
+    
+    width: 80%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 40px;
+}
+.founder img{
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    border-radius: 80%;
+    height: 150px;
+    width: 15%;
+}
+.foundercontent{
+    display: inline-block;
+    width: 100%;
+}
+
+#ftext{
+    
+    padding: 50px;
+    padding-left: 200px;
+    border-radius: 20px;
+    /* left: 100px; */
+    background-color: #dacae4bb;
+}
+#ftext h3{
+    padding-bottom: 20px;
+}
+#ftext p{
+    padding-bottom: 20px;
+}
+
+
+#story{
+    padding-top: 150px;
+    width: 80%;
+    margin: auto;
+    line-height: 20px;
+    text-align: center;
+    /* border: 2px solid blue; */
+}
+
+#story h2{
+    background-color: #dacae4bb; 
+    padding-top: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+#storyp{
+    
+    border: 2px solid #dacae4bb ;
+    padding: 30px 0; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+}
+#story p{
+   width: 90%;
+   margin: auto;
+    padding-bottom: 20px;
+    
+}
+
+#story h2{
+    padding-bottom: 30px;
+}
+
+
+/* contact page css */
+
+
+
+#contact{
+    /* width: 80%; */
+    margin: 0 50% 0 10% ;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+#contact h1{
+    font-size: 40px;
+    padding: 40px 0;
+    padding-left: 10px;
+}
+#contact p{
+    padding-left: 10px;
+}
+
+#contact input, #contact textarea{
+    margin: 5px 0px 20px 0px;
+    width: 100%;
+    padding: 10px; 
+    border: 2px solid rgba(31, 12, 49, 0.144);
+    border-radius: 5px;
+    background-color: rgba(31, 12, 49, 0.074);
+}
+#contact input:hover, #contact textarea:hover{
+    border: 2px solid rgba(31, 12, 49, 0.300);
+    background-color: rgba(31, 12, 49, 0.114);
+}
+
+
+#contactbutton{
+
+    background-color:  #88679c8c ;
+    color: #060111ea ;
+    padding: 15px;
+    border-radius: 3px;
+    width: 20%;
+
+}
+
+#contactbutton:hover{
+    font-weight: 700  ;
+    color:  white;
+    background-color:  #060111ea  ;
+}
+
+
+#contact form{
+    padding: 10px ; 
+}
+
+
+
+
+/* The Login page CSS */
+
+#avatar{
+    border-radius: 50%;
+    height: 200px;
+    /* border: 2px solid  rgba(77, 72, 80, 0.733) ; */
+    margin-bottom: 20px;
+    
+}
+
+#formcontent{
+
+    text-align: center; 
+    padding-top: 150px;
+    width: 40%;
+    margin: auto;
+    /* background-color: aqua; */
+}
+
+#contentlogin{
+    margin-bottom: 50px;
+    padding: 50px 0 0 0 ;
+    border: 2px solid #dacae4bb;
+
+
+}
+
+#contentlogin:hover{
+    border: 2px solid rgba(77, 72, 80, 0.300) ; 
+}
+
+.loginrow{
+    margin-top: 15px;
+    min-height: 50px ;
+   
+}
+.loginrow label{
+    color: rgba(6, 1, 17, 0.950); 
+
+}
+.loginrow input{
+    padding: 10px 5px; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 55%;
+    border-radius: 30px;
+    border: 2px solid rgba(218, 202, 228, 0.933)  ;
+    background-color: rgba(31, 12, 49, 0.060);  
+}  
+
+.loginrow input:hover{
+    border: 2px solid rgba(77, 72, 80, 0.433) ; 
+    background-color: rgba(31, 12, 49, 0.110);
+}
+
+#logbutton{
+
+    background-color:#88679c8c ;
+    color: #060111ea ;
+    border-radius: 30px;
+    margin-bottom: 200px;
+    
+    padding: 15px 50px;
+
+}
+
+#logbutton:hover{
+    font-weight: 700  ;
+    color:  white;
+    background-color:  #060111ea  ;
+}
+
+
+
+
+

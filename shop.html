@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestsellers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css1.css">
+    
+</head>
+
+<body style="background-color: #772f1a;
+background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);">
+    <header>
+        <nav>
+            <h1 id="branding"><span id="brand">E</span>KART</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="current"><a href="shop.html#shopbuy">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="login"><a href="login.html">Log in</a></li>
+                <li id="ecart"><a href="shop.html#cart">Cart <i class="fa fa-shopping-cart"></i></a></li>            </ul>
+        </nav>
+    </header>
+    <section>
+        <div id="shopbuy">
+            <div class="category" id="electronic">
+                <h1>Electronics</h1>
+                
+                <div class="subcategory" id="phone">
+                    <!-- <h3>Mobile</h3>  -->
+                    <div class="item">
+                        <img src="imageson/phoneitem1.jpeg" alt="">
+
+                        <h4 class="name"> Realme 6 (Comet Blue, 64 GB) (6 GB RAM)</h4>
+                        <h4 class="price">₹15,999</h4>
+                        <button onclick="funcbuy()"  onclick="incart()" class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="0" class="cartbutton">Add to Cart</button>
+
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="imageson/phoneitem2.jpeg" alt="">
+
+                        <h4 class="name">Samsung Galaxy M21 (Midnight Blue, 64 GB) (4 GB RAM)</h4>
+                        <h4 class="price">₹15,999</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="1" class="cartbutton">Add to Cart</button>
+                        
+
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="imageson/phoneitem3.jpeg" alt="">
+
+                        <h4 class="name">POCO X2 (Atlantis Blue, 128 GB) (6 GB RAM)</h4>
+                        <h4 class="price">₹18,499</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="2" class="cartbutton">Add to Cart</button>
+                        
+
+                    </div>
+                </div>
+                <div class="subcategory" id="laptop">
+                    <div class="item">
+                        <img src="imageson/laptopitem1.jpeg" alt="">
+
+                        <h4 class="name">Acer Aspire 7 Core i5 9th Gen - (8 GB/512 GB SSD/Windows 10 Home/4 GB Graphics/NVIDIA Geforce GTX 1650...</h4>
+                        <h4 class="price">₹56,990</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="3" class="cartbutton">Add to Cart</button>
+
+                      
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="imageson/laptopitem2.jpeg" alt="">
+
+                        <h4 class="name"> Asus VivoBook 14 Ryzen 5 Quad Core 2nd Gen - (8 GB/512 GB SSD/Windows 10 Home) X412DA-EK501T Thin and ...</h4>
+                        <h4 class="price">₹42,990</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="4" class="cartbutton">Add to Cart</button>
+
+                        
+
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="imageson/laptopitem3.jpeg" alt="">
+
+                        <h4 class="name">HP 14s Core i5 10th Gen - (8 GB/512 GB SSD/Windows 10 Home) 14s-cs3010TU Laptop</h4>
+                        <h4 class="price">₹52,990</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)"  id="5" class="cartbutton">Add to Cart</button>
+                        
+                    </div>
+                </div>
+                <div class="subcategory" id="camera">
+                    <div class="item">
+                        <img src="imageson/cameraitem1.jpeg" alt="">
+
+                        <h4 class="name">Canon PowerShot SX430 IS (20 MP, 45x Optical Zoom,
+                            4x Digital Zoom, Black)</h4>
+                        <h4 class="price">₹15,390</h4> 
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="6" class="cartbutton">Add to Cart</button>
+                        
+                    </div>
+                    <div class="item"><img src="imageson/cameraitem2.jpeg" alt="">
+
+                        <h4 class="name">Sony CyberShot DSC-H300 (20.1 MP, 35
+                            Optical Zoom, 70x Digital Zoom, Black)</h4>
+                        <h4 class="price">₹14,690</h4>  
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="7" class="cartbutton">Add to Cart</button>
+                        
+                    </div>
+                    <div class="item"><img src="imageson/cameraitem3.jpeg" alt="">
+
+                        <h4 class="name">Nikon D3500 DSLR Camera AF-P DX NIKKOR
+                            18-55mm f/3.5-5.6G VR (Black)</h4>
+                        <h4 class="price">₹32,999</h4> 
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="8" class="cartbutton">Add to Cart</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="category" id="homeapp">
+                <h1>Home Appliances</h1>
+                <div class="subcategory" id="aircondioner">
+                    <div class="item">
+                        <img src="imageson/acitem1.jpeg" alt="">
+
+                        <h4 class="name">Samsung 1.5 Ton 5 Star Split Triple Inverter Dura Series AC - White</h4>
+                        <h4 class="price">₹34,999</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="9" class="cartbutton">Add to Cart</button>
+                        
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/acitem2.jpeg" alt="">
+
+                        <h4 class="name">Whirlpool 1.5 Ton 3 Star Split Inverter AC - White (1.5T MAGICOOL PRO + 3S COPR inv-i/o, Copper
+                            Condenser)</h4>
+                        <h4 class="price">₹29,999</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="10" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/acitem3.jpeg" alt="">
+
+                        <h4 class="name">                        LG 1.5 Ton 5 Star Split Dual Inverter AC - White (KS-Q18ENZA, Copper Condenser)
+                        </h4>
+                        <h4 class="price">₹38,999</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="11" class="cartbutton">Add to Cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="subcategory" id="washingmachine">
+                    <div class="item">
+                        <img src="imageson/wmitem1.jpeg" alt="">
+
+                        <h4 class="name">Samsung 6.2 kg with Monsoon Feature Fully Automatic Top Load Grey (WA62M4100HY/TL 01)</h4>
+                        <h4 class="price">₹13,290</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="12" class="cartbutton">Add to Cart</button>
+
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wmitem2.jpeg" alt="">
+
+                        <h4 class="name"> LG 6.5 kg 5 Star Inverter Fully Automatic Top Load Silver</h4>
+                        <h4 class="price">₹15,990</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="13" class="cartbutton">Add to Cart</button>
+                       
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wmitem3.jpeg" alt="">
+
+                        <h4 class="name">LG 6 kg 5 Star Fully Automatic Front Load with In-built Heater White</h4>
+                        <h4 class="price">₹23,990</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="14" class="cartbutton">Add to Cart</button>
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="subcategory" id="kitchen">
+                <div class="item">
+                    <img src="imageson/kaitem1.jpeg" alt="">
+
+                    <h4 class="name"> Butterfly Rapid 4 Jar 750 watts 750 W Juicer Mixer Grinder (Black, 4 Jars)</h4>
+                    <h4 class="price">₹2,849</h4>
+                    <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                    <button onclick="myCart(this)" id="15" class="cartbutton">Add to Cart</button>
+                   
+                   
+                </div>
+                <div class="item">
+                    <img src="imageson/kaitem2.jpeg" alt="">
+
+                    <h4 class="name">Butterfly Rapid 4 Burner Glass Manual Gas Stove</h4>
+                    <h4 class="price">₹2,849</h4>
+                    <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                    <button onclick="myCart(this)" id="16" class="cartbutton">Add to Cart</button>
+                    
+                    <!-- <! -->
+                </div>
+                <div class="item">
+                    <img src="imageson/kaitem3.jpeg" alt="">
+
+                    <h4 class="name">MarQ by Flipkart 18-Litre 18L1200W4HL Oven Toaster Grill (OTG) (Black)</h4>
+                    <h4 class="price">₹3,699</h4>
+                    <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                    <button onclick="myCart(this)" id="17" class="cartbutton">Add to Cart</button>
+                    
+                </div>
+                </div>
+            </div>
+            <div class="category" id="men">
+                <h1>For Men</h1>
+                <div class="subcategory" id="mclothes">
+                    <div class="item">
+                        <img src="imageson/mclothesitem1.jpeg" alt="">
+
+                        <h4 class="name">Men Formal Shirt</h4>
+                        <h4 class="price">₹1,200</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="18" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/mclothesitem2.jpeg" alt="">
+
+                        <h4 class="name">Slim Men Blue Jeans</h4>
+                        <h4 class="price">₹9,599</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="19" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/mclothesitem3.jpeg" alt="">
+
+                        <h4 class="name">Men Solid Silk Blend Straight Kurta</h4>
+                        <h4 class="price">₹3,299</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="20" class="cartbutton">Add to Cart</button>
+                        
+                        
+
+                    </div>
+                </div>
+
+                <div class="subcategory" id="mthings">
+                    <div class="item">
+                        <img src="imageson/mthingsitem1.jpeg" alt="">
+
+                        <h4 class="name">Sunglasses</h4>
+                        <h4 class="price">₹1,299</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="21" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/mthingsitem2.jpeg" alt="">
+
+                        <h4 class="name">Fossil Watch</h4>
+                        <h4 class="price">₹5,099</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="22" class="cartbutton">Add to Cart</button>
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/mthingsitem3.jpeg" alt="">
+
+                        <h4 class="name">Fogg Scent Impressio Eau de Parfum - 100 ml</h4>
+                        <h4 class="price">₹600</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="23" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                </div>
+                <div class="subcategory" id="mfootwear">
+                    <div class="item">
+                        <img src="imageson/footwearitem1.jpeg" alt="">
+
+                        <h4 class="name">Formal shoes</h4>
+                        <h4 class="price">₹17,999</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="24" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/footwearitem2.jpeg" alt="">
+
+                        <h4 class="name">Running shoes</h4>
+                        <h4 class="price">₹3,099</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="25" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/footwearitem3.jpeg" alt="">
+
+                        <h4 class="name">Scandals</h4>
+                        <h4 class="price">₹1,599</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="26" class="cartbutton">Add to Cart</button>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="category"  id="women" >
+                <h1>For Women</h1>
+                <div class="subcategory" id="wclothes">
+
+                    <div class="item">
+                        <img src="imageson/wclothesitem1.jpeg" alt="">
+
+                        <h4 class="name">Saree</h4>
+                        <h4 class="price">₹14,000</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button  onclick="myCart(this)" id="27" class="cartbutton">Add to Cart</button>
+
+                        
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wclothesitem2.jpeg" alt="">
+
+                        <h4 class="name">Skirt</h4>
+                        <h4 class="price">₹2,400</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="28" class="cartbutton">Add to Cart</button>
+                        
+                        
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wclothesitem3.jpeg" alt="">
+
+                        <h4 class="name">Modern wear</h4>
+                        <h4 class="price">₹1,400</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="29" class="cartbutton">Add to Cart</button>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="subcategory" id="wthings">
+                    <div class="item">
+                        <img src="imageson/wthingsitem1.jpeg" alt="">
+
+                        <h4 class="name">Women Red Shoulder Bag</h4>
+                        <h4 class="price">₹3,400</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="30" class="cartbutton">Add to Cart</button>
+                        
+                       
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wthingsitem2.jpeg" alt="">
+
+                        <h4 class="name">Shany Professional Makeup Kit</h4>
+                        <h4 class="price">₹6,400</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="31" class="cartbutton">Add to Cart</button>
+                        
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wthingsitem3.jpeg" alt="">
+
+                        <h4 class="name">Casual Green Clutch</h4>
+                        <h4 class="price">₹7,100</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="32" class="cartbutton">Add to Cart</button>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="subcategory" id="footwear">
+                    <div class="item">
+                        <img src="imageson/wfootwearitem1.jpeg" alt="">
+
+                        <h4 class="name">Women Black Heels Sandal</h4>
+                        <h4 class="price">₹3,400</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="33" class="cartbutton">Add to Cart</button>
+                        
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wfootwearitem2.jpeg" alt="">
+
+                        <h4 class="name" id="itemname">Casual shoes</h4>
+                        <h4  id="itemprice" class="price">₹1,400</h4>
+                        <button onclick="funcbuy()" class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="34" class="cartbutton">Add to Cart</button>
+                        
+                       
+                        
+                    </div>
+                    <div class="item">
+                        <img src="imageson/wfootwearitem3.jpeg" alt="">
+
+                        <h4 class="name" id="itemname">Boots</h4>
+                        <h4 id="itemprice" class="price">₹3,400</h4>
+                        <button onclick="funcbuy()"  class="buybutton">BUY NOW</button>
+                        <button onclick="myCart(this)" id="35" class="cartbutton">Add to Cart</button>
+                        
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+<section>
+    
+    <div id="cart">
+        <h2 id="carthead">Check the items in the Cart</h2>
+ 
+        <div id="cartcontent"  >
+            <div id="cartitem">
+                <li id="cartlihead">Items</li>
+                
+                <!-- < -->
+            </div>
+            
+              <div id="cartprice">
+                <li id="cartlihead">Price</li>
+                
+
+              </div>
+              <div id="totitem">Total Amount :  </div>
+              <div id="totamt"></div>
+              
+        </div>
+        <a href="#" onclick="buyItems(this)" id="buyitbutton">BUY NOW</a> 
+       
+       
+        <!-- <div id="cartcontent">
+                <div id="cartite">
+                    <h4>Items</h4>
+                    <div id="cartitem"  
+                    ></div>
+                </div>
+                
+                <div id="cartpric">
+                    <h4>Prices</h4>
+                    <div id="cartprice"></div>
+                </div>
+                 -->
+
+            </div> 
+
+            <!-- <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr> -->
+            <!-- <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr> -->
+        <!-- <button type="button" onclick="myFunction(this)" id="1">Button1</button>
+<button type="button" onclick="myFunction(this)" id="2">Button1</button>
+<button type="button" onclick="myFunction(this)" id="3">Button1</button> -->
+    <!-- <p id="cartitem">  </p>
+    <p id="cartprice">  </p> -->
+    <!-- <p id="cartitem">  </p>
+    <p id="cartprice">  </p>
+    <p id="cartitem">  </p>
+    <p id="cartprice">  </p> -->
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footrow">
+            <h3> <a href="" class="footernav id=" brand1">EKART</a> </h3>
+            <h3 id="footextra">For the best E-commerce Service and customer satisfaction</h3>
+            <div id="fafaicon">
+                <i class=" fa fa-facebook fa-1x"
+                    style="color:white;background-color:#dacae4bb ;padding:10px 12px;margin:0px 5px;border-radius: 50%"></i>
+                <i class="	fa fa-twitter fa-1x"
+                    style="color:white;background-color:#dacae4bb;padding: 10px;margin:0px 5px;border-radius: 50%"></i>
+                <i class=" fa fa-pinterest-p fa-1x"
+                    style="color:white;background-color:#dacae4bb;padding:10px 12px;margin:0px 5px;border-radius: 50%"></i>
+                <i class="fa fa-google-plus fa-1x"
+                    style="color:white;background-color:#dacae4bb;padding:10px 8px;margin:0px 5px;border-radius: 50%"></i>
+                <i class="fa fa-instagram fa-1x"
+                    style="color:white;background-color:#dacae4bb;padding:10px 10px;margin:0px 5px;border-radius: 50%"></i>
+            </div>
+        </div>
+        <div class="footrow">
+            <h3 class="footernav">Contact Us</h3>
+            <ul>
+                <li><i class=" fa fa-phone fa-1x"
+                        style="color:white;background-color:#dacae4bb;padding:10px 12px;margin:0px 5px;border-radius: 50%"></i><a
+                        href="">0832-67543</a></li>
+                <li> <i class=" fa fa-envelope fa-1x"
+                        style="color:white;background-color:#dacae4bb;padding:10px 12px;margin:0px 5px;border-radius: 50%"></i><a
+                        href="">ekartbusiness@gmail.com</a></li>
+                <li><i class=" fa fa-home fa-1x"
+                        style="color:white;background-color:#dacae4bb;padding:10px 12px;margin:0px 5px;border-radius: 50%"></i>
+                    <a href="">B36 ekart office, Margao, Goa</a></li>
+            </ul>
+        </div>
+        <div class="footrow">
+            <h3 class="footernav">Navigation</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="shop.html">Shop Now</a></li>
+                <li> <a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <script src="ekart.js"></script> 
+</body>
+
+</html>

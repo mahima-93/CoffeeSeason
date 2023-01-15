@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css1.css">
+    
+</head>
+
+<body style="background-color: #772f1a; background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);">
+<header class="menu">
+        
+    <section >
+        <a href="webtest.html">Home</a>
+        <a href="menupage.html">Menu</a>
+        <a href="Bestsellers.html">Best Sellers</a>
+        <a href="about.html">About</a>
+        <a href="Cakes.html#cart">Cart <i class="fa fa-shopping-cart"></i></a>            </ul>
+    </section>
+    </header>
+    <section>
+        <div id="shopbuy">
+            <div class="category" id="electronic">
+                <h1 style="color:#5e391d ;font-family: cursive; font-size:50px;  text-shadow: 2px 2px #9b8472;">Cakes</h1>
+                
+                <div class="subcategory" id="phone">
+                    
+                    <div class="item">
+                        <img src="Cakes/blueberry-glaze-cake.webp" alt="">
+
+                        <h4 class="name" style="font-family:cursive; font-size:20px;">Blueberry Blaze Cake </h4>
+                        <h4 class="price">₹1,599</h4>
+                        <button onclick="funcbuy()"  onclick="incart()" class="buybutton"><a href="payment.html">BUY NOW</a></button>
+                        <button onclick="myCart(this)" id="0" class="cartbutton">ADD TO CART</button>
+
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="Cakes/choco-walnut-dry-cake.webp" alt="">
+
+                        <h4 class="name" style="font-family:cursive; font-size:20px;">Choco Walnut Dry Cake</h4>
+                        <h4 class="price">₹999</h4>
+                        <button onclick="funcbuy()"  class="buybutton"><a href="payment.html">BUY NOW</a></button>
+                        <button onclick="myCart(this)" id="1" class="cartbutton">ADD TO CART</button>
+                        
+
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="Cakes/fresh-fruit-almond-cake.webp" alt="">
+
+                        <h4 class="name" style="font-family:cursive; font-size:20px;">Fresh Fruit Almond Cake</h4>
+                        <h4 class="price">₹1,999</h4>
+                        <button onclick="funcbuy()"  class="buybutton"><a href="payment.html">BUY NOW</a></button>
+                        <button onclick="myCart(this)" id="2" class="cartbutton">Add to Cart</button>
+                        
+
+                    </div>
+                </div>
+                <div class="subcategory" id="laptop">
+                    <div class="item">
+                        <img src="Cakes/oreo-chocolate-cake.webp" alt="">
+
+                        <h4 class="name" style="font-family:cursive; font-size:20px;">Oreo Chocolate Cake</h4>
+                        <h4 class="price">₹899</h4>
+                        <button onclick="funcbuy()"  class="buybutton"><a href="payment.html">BUY NOW</a></button>
+                        <button onclick="myCart(this)" id="3" class="cartbutton">ADD TO CART</button>
+
+                      
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="Cakes/Pineapple-cake.jpg" alt="">
+
+                        <h4 class="name" style="font-family:cursive; font-size:20px;">Pineapple Cake</h4>
+                        <h4 class="price">₹899</h4>
+                        <button onclick="funcbuy()"  class="buybutton"><a href="payment.html">BUY NOW</a></button>
+                        <button onclick="myCart(this)" id="4" class="cartbutton">ADD TO CART</button>
+
+                        
+
+                        
+
+                    </div>
+                    <div class="item">
+                        <img src="Cakes/Crunchy Caramel Walnut Cake.jpg" alt="">
+
+                        <h4 class="name" style="font-family:cursive; font-size:20px;">Crunchy Caramel Walnut Cake</h4>
+                        <h4 class="price">₹1,299</h4>
+                        <button onclick="funcbuy()"  class="buybutton"><a href="payment.html">BUY NOW</a></button>
+                        <button onclick="myCart(this)"  id="5" class="cartbutton">ADD TO CART</button>
+                        
+                    </div>
+                </div>
+            </div>    
+            
+        </div>
+    </section>
+
+
+
+
+
+
+<section>
+    
+    <div id="cart">
+        <h2 id="carthead">Check the items in the Cart</h2>
+ 
+        <div id="cartcontent"  >
+            <div id="cartitem">
+                <li id="cartlihead">Items</li>
+                
+                <!-- < -->
+            </div>
+            
+              <div id="cartprice">
+                <li id="cartlihead">Price</li>
+                
+
+              </div>
+              <div id="totitem">Total Amount :  </div>
+              <div id="totamt"></div>
+              
+        </div>
+        <a href="payment.html" onclick="buyItems(this)" id="buyitbutton">BUY NOW</a> 
+       
+       
+        <!-- <div id="cartcontent">
+                <div id="cartite">
+                    <h4>Items</h4>
+                    <div id="cartitem"  
+                    ></div>
+                </div>
+                
+                <div id="cartpric">
+                    <h4>Prices</h4>
+                    <div id="cartprice"></div>
+                </div>
+                 -->
+
+            </div> 
+
+            <!-- <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr> -->
+            <!-- <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr>
+            <tr>
+                <td class="cartitem"></td>
+                <td class="cartprice"></td>
+            </tr> -->
+        <!-- <button type="button" onclick="myFunction(this)" id="1">Button1</button>
+<button type="button" onclick="myFunction(this)" id="2">Button1</button>
+<button type="button" onclick="myFunction(this)" id="3">Button1</button> -->
+    <!-- <p id="cartitem">  </p>
+    <p id="cartprice">  </p> -->
+    <!-- <p id="cartitem">  </p>
+    <p id="cartprice">  </p>
+    <p id="cartitem">  </p>
+    <p id="cartprice">  </p> -->
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='footer'>
+        <div class = 'f-content'>
+            <h5>Developed by Erisha & Mahima</h5>
+            <p>This website was created as part of E-commerce practicals. </p>
+        </div>
+     </div>
+    <!-- <script src="ekart1.js"></script>  -->
+    <script src="ekart.js"></script> 
+    <!-- <script>console.log("Hello")</script> -->
+</body>
+
+</html>

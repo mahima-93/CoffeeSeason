@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>payment gateway</title>
+        <link rel="stylesheet" href="payment.css">
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src="pay.js"></script>
+    </head>
+    <body oncontextmenu='return false' class='snippet-body'>
+        <script>
+        // ---------Responsive-navbar-active-animation-----------
+function test(){
+	var tabsNewAnim = $('#navbarSupportedContent');
+	var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+	var activeItemNewAnim = tabsNewAnim.find('.active');
+	var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+	var itemPosNewAnimTop = activeItemNewAnim.position();
+	var itemPosNewAnimLeft = activeItemNewAnim.position();
+	$(".hori-selector").css({
+		"top":itemPosNewAnimTop.top + "px", 
+		"left":itemPosNewAnimLeft.left + "px",
+		"height": activeWidthNewAnimHeight + "px",
+		"width": activeWidthNewAnimWidth + "px"
+	});
+	$("#navbarSupportedContent").on("click","li",function(e){
+		$('#navbarSupportedContent ul li').removeClass("active");
+		$(this).addClass('active');
+		var activeWidthNewAnimHeight = $(this).innerHeight();
+		var activeWidthNewAnimWidth = $(this).innerWidth();
+		var itemPosNewAnimTop = $(this).position();
+		var itemPosNewAnimLeft = $(this).position();
+		$(".hori-selector").css({
+			"top":itemPosNewAnimTop.top + "px", 
+			"left":itemPosNewAnimLeft.left + "px",
+			"height": activeWidthNewAnimHeight + "px",
+			"width": activeWidthNewAnimWidth + "px"
+		});
+	});
+}
+$(document).ready(function(){
+	setTimeout(function(){ test(); });
+});
+$(window).on('resize', function(){
+	setTimeout(function(){ test(); }, 500);
+});
+$(".navbar-toggler").click(function(){
+	$(".navbar-collapse").slideToggle(300);
+	setTimeout(function(){ test(); });
+});
+
+
+
+// --------------add active class-on another-page move----------
+jQuery(document).ready(function($){
+	// Get current path and find target link
+	var path = window.location.pathname.split("/").pop();
+
+	// Account for home page with empty path
+	if ( path == '' ) {
+		path = 'index.html';
+	}
+
+	var target = $('#navbarSupportedContent ul li a[href="'+path+'"]');
+	// Add active class to target link
+	target.parent().addClass('active');
+});
+
+
+
+
+// Add active class on another page linked
+// ==========================================
+// $(window).on('load',function () {
+//     var current = location.pathname;
+//     console.log(current);
+//     $('#navbarSupportedContent ul li a').each(function(){
+//         var $this = $(this);
+//         // if the current path is like this link, make it active
+//         if($this.attr('href').indexOf(current) !== -1){
+//             $this.parent().addClass('active');
+//             $this.parents('.menu-submenu').addClass('show-dropdown');
+//             $this.parents('.menu-submenu').parent().addClass('active');
+//         }else{
+//             $this.parent().removeClass('active');
+//         }
+//     })
+// });
+</script>
+<style>@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    body{
+        font-family: 'Roboto', sans-serif;
+        background-color: rgb(230, 212, 212);
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    i {
+        margin-right: 10px;
+    }
+    /*----------bootstrap-navbar-css------------*/
+    .navbar-logo{
+        padding: 15px;
+        color: rgb(187, 144, 26);
+    }
+    .navbar-mainbg{
+        background-color: rgb(0,0,0);
+        padding: 0px;
+    }
+    #navbarSupportedContent{
+        overflow: hidden;
+        position: relative;
+    }
+    #navbarSupportedContent ul{
+        padding: 0px;
+        margin: 0px;
+    }
+    #navbarSupportedContent ul li a i{
+        margin-right: 10px;
+    }
+    #navbarSupportedContent li {
+        list-style-type: none;
+        float: left;
+    }
+    #navbarSupportedContent ul li a{
+        color: rgba(230, 159, 67, 0.815);
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        padding: 20px 20px;
+        transition-duration:0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+    }
+    #navbarSupportedContent>ul>li.active>a{
+        color:rgb(243, 240, 233);
+        background-color: transparent;
+        transition: all 0.7s;
+    }
+    #navbarSupportedContent a:not(:only-child):after {
+        content: "\f105";
+        position: absolute;
+        background-color: #b8732f;
+        right: 20px;
+        top: 10px;
+        font-size: 14px;
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 900;
+        transition: 0.5s;
+    }
+    #navbarSupportedContent .active>a:not(:only-child):after {
+        transform: rotate(90deg);
+        background-color: #b8732f;
+        
+    }
+    .hori-selector{
+        display:inline-block;
+        color: #b8732f;
+        position:absolute;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        transition-duration:0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        background-color:#b8732f(29, 165, 206);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-top: 10px;
+    }
+    .hori-selector .right,
+    .hori-selector .left{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        color: #b8732f;
+        background-color: #b8732f(29, 165, 206);
+        bottom: 10px;
+    }
+    .hori-selector .right{
+        right: -25px;
+    }
+    .hori-selector .left{
+        left: -25px;
+    }
+    .hori-selector .right:before,
+    .hori-selector .left:before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        
+        background-color: #080705;
+    }
+    .hori-selector .right:before{
+        bottom: 0;
+        right: -25px;
+        color: #b8732f;
+    }
+    .hori-selector .left:before{
+        bottom: 0;
+        left: -25px;
+    }
+    
+    
+    @media(min-width: 992px){
+        .navbar-expand-custom {
+            -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            color: #b8732f;
+            
+        }
+        .navbar-expand-custom .navbar-nav {
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        .navbar-expand-custom .navbar-toggler {
+            display: none;
+        }
+        .navbar-expand-custom .navbar-collapse {
+            display: -ms-flexbox!important;
+            display: flex!important;
+            -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+        }
+    }
+    
+    
+    @media (max-width: 991px){
+        #navbarSupportedContent ul li a{
+            padding: 12px 30px;
+        }
+        .hori-selector{
+            margin-top: 0px;
+            color: #b8732f;
+            margin-left: 10px;
+            border-radius: 0;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+        .hori-selector .left,
+        .hori-selector .right{
+            right: 10px;
+            
+        }
+        .hori-selector .left{
+            top: -25px;
+            left: auto;
+        }
+        .hori-selector .right{
+            bottom: -25px;
+        }
+        .hori-selector .left:before{
+            left: -25px;
+            top: -25px;
+        }
+        .hori-selector .right:before{
+            bottom: -25px;
+            left: -25px;
+            
+        }
+    }</style>
+    
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+            <a class="navbar-brand navbar-logo" href="webtest.html" style="font-family:cursive">Coffee Season</a>
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="webtest.html"><i class="fas fa-bars"></i>HOME</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="menupage.html"><i class="far fa-address-book"></i>MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Bestsellers.html"><i class="far fa-clone"></i>BESTSELLERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-paper-plane"></i>ABOUT</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </nav>
+        <div class="container py-5">
+            <!-- For demo purpose -->
+            <div class="row mb-4">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-6" style="font-family:verdana; font-family: cursive;
+                    color: rgb(177, 132, 8);
+                    text-shadow: 2px 2px 4px #000000;">Payments</h1>
+                </div>
+            </div> <!-- End -->
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="card ">
+                        <div class="card-header">
+                            <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                                <!-- Credit card form tabs -->
+                                <ul role="tablist" class="nav bg-light nav-pills bg-warning rounded nav-fill mb-3">
+                                    <li class="nav-item"> <a data-toggle="pill" href="#credit-card" class="nav-link active"> <i class="fas fa-credit-card mr-2"></i> Credit Card </a> </li>
+                                    <li class="nav-item"> <a data-toggle="pill" href="#paypal" class="nav-link "> <i class="fab fa-paypal mr-2"></i> Paytm </a> </li>
+                                    <li class="nav-item"> <a data-toggle="pill" href="#net-banking" class="nav-link "> <i class="fas fa-mobile-alt mr-2"></i> Net Banking </a> </li>
+                                </ul>
+                            </div> <!-- End -->
+                            <!-- Credit card form content -->
+                            <div class="tab-content">
+                                <!-- credit card info-->
+                                <div id="credit-card" class="tab-pane fade show active pt-3">
+                                    <form id="myform" role="form" onsubmit="event.preventDefault()">
+                                        <div class="form-group"> 
+                                            <label for="username">
+                                            <h6>Card Holder</h6>
+                                            </label> 
+                                            <input type="text" name="username" placeholder="Card Holder Name" required class="form-control "> 
+                                        </div>
+                                        <div class="form-group"> 
+                                            <label for="cardNumber">
+                                             <h6>Card number</h6>
+                                            </label>
+                                            <div class="input-group"> 
+                                                <input type="text" name="cardNumber" placeholder="1234 5678 9123 4567" class="form-control " required>
+                                                <div class="input-group-append"> 
+                                                    <span class="input-group-text text-muted">
+                                                     <i class="fab fa-cc-visa mx-1"></i> 
+                                                     <i class="fab fa-cc-mastercard mx-1"></i> 
+                                                     <i class="fab fa-cc-amex mx-1"></i> </span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="form-group"> <label><span class="hidden-xs">
+                                                            <h6>Expiration Date</h6>
+                                                        </span></label>
+                                                    <div class="input-group"> 
+                                                        <input type="number" placeholder="MM" name="" class="form-control" min="1" max="12" required>
+                                                         <input type="number" placeholder="YY" name="" class="form-control" min="15" max="50" required> </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group mb-4"> 
+                                                    <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
+                                                        <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                    </label> 
+                                                    <input type="text" placeholder="123" required class="form-control"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            
+                                            <button  onclick="myfun()" type="button" class=" subscribe btn btn-warning btn-block btn-rounded shadow-sm "> Confirm Payment </button> <!--subscribe btn btn-primary btn-block shadow-sm-->
+                                         
+                                    </form>
+                                </div>
+                            </div> <!-- End -->
+                            <!-- Paypal info -->
+                            <div id="paypal" class="tab-pane fade pt-3">
+                                <label for="FirstName">
+                                    <h6>Name</h6>
+                                    <input type="text" name="Firstname" placeholder="First name" required>
+                                </label>
+                                <label for="lastname">
+                                    <h6>Last Name</h6>
+                                    <input type="text" name="lastname" placeholder="Lastname" required>
+                                </label><br>
+                                <label for="email">
+                                    <h6>Email-id</h6>
+                                    <input type="mail" name="email" placeholder="name@gmail.com" required>
+                                </label><br>
+                                <label for="mobno.">
+                                    <h6>Mobile No.</h6>
+                                    <input type="text" name="mobno." placeholder="123 456 1245" required>
+                                    <p class="text-muted">Mobile number which is link to bank account</p>
+                                </label>
+                               
+                                <p> <button onclick="pay()"  type="button" class="btn btn-warning "><i class="fab fa-paypal mr-2"></i>Send Money</button> </p>
+                                <p class="text-muted"> Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                            </div> <!-- End -->
+                            <!-- bank transfer info -->
+                            <div id="net-banking" class="tab-pane fade pt-3">
+                                <div class="form-group "> <label for="Select Your Bank">
+                                        <h6>Select your Bank</h6>
+                                    </label> <select class="form-control" id="ccmonth">
+                                        <option value="" selected disabled>--Please select your Bank--</option>
+                                        <option>HDFC Bank</option>
+                                        <option>SBI Bank</option>
+                                        <option>Axis Bsnk</option>
+                                        <option>Canara Bank</option>
+                                        <option>ICICI Bank</option>
+                                        <option>Bank Of Baroda</option>
+                                        <option>Bank Of India</option>
+                                        <option>Union Bank</option>
+                                    </select> </div>
+                                <div class="form-group">
+                                    <p> <button type="button" class="btn btn-warning "><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
+                                </div>
+                                <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                            </div> <!-- End -->
+                            <!-- End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+            <script type='text/javascript' src=''></script>
+            <script type='text/javascript' src=''></script>
+            <script type='text/Javascript'>$(function() {
+                $('[data-toggle="tooltip"]').tooltip()})
+
+               
+           
+    </body>
+</html>
